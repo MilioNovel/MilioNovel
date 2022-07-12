@@ -7,4 +7,4 @@ Who Wants to Be a Millionaire? × Love Novel × Minecraft
 - ~Assets/TextMesh Pro/Resources/Fonts & Materials/Noto_Sans_JP内のファイル全て~<br>
 ~→[Noto_Sans_JP.7z](https://ux.getuploader.com/tunakaniriGitHub/download/1)~(現在は使用していない)<br>
 - Assets/TextMesh Pro/Resources/Fonts & Materials/06_NotoSansCJKjp内のファイル全て<br>
-→[06_NotoSansCJKjp.7z](https://ux.getuploader.com/tunakaniriGitHub/download/2
+→[06_NotoSansCJKjp.7z](https://ux.getuploader.com/tunakaniriGitHub/download/2)
