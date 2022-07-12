@@ -1,5 +1,5 @@
-Font: Noto Sans CJK JP  Style: DemiLight
-Point Size: 90   SP/PD Ratio: 5.6%
+Font: Noto Sans CJK JP  Style: Bold
+Point Size: 92   SP/PD Ratio: 5.4%
 
 Characters included: 7129/7149
 Missing characters: 20
