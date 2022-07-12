@@ -648,9 +648,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:be12805464705d24f85258454d03622d
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 271958237184
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -696,8 +696,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Welcome to MilioNovel !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad020e21d37c84149b44fff3c48d71e0, type: 2}
-  m_sharedMaterial: {fileID: 661901318115539589, guid: ad020e21d37c84149b44fff3c48d71e0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b32285e3abb24b540926f4c336d90bf4, type: 2}
+  m_sharedMaterial: {fileID: 2383776914505158595, guid: b32285e3abb24b540926f4c336d90bf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -721,10 +721,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 72
+  m_fontSizeBase: 900
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
