@@ -11,7 +11,6 @@ TrueTypeFontImporter:
   fontNames:
   - Noto Sans CJK JP
   fallbackFontReferences:
-  - {fileID: 12800000, guid: f4eac6b323862a249906bc90147144c7, type: 3}
   - {fileID: 12800000, guid: e0b356bbbc775f94aa45f376de907234, type: 3}
   - {fileID: 12800000, guid: 74ad7fd516e803649807d47f6b6efba0, type: 3}
   customCharacters: 

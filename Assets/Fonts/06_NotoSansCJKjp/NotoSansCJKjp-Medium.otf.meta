@@ -11,12 +11,11 @@ TrueTypeFontImporter:
   fontNames:
   - Noto Sans CJK JP
   fallbackFontReferences:
-  - {fileID: 12800000, guid: d981e513b3d22f846b33ee836898cff3, type: 3}
-  - {fileID: 12800000, guid: f4eac6b323862a249906bc90147144c7, type: 3}
   - {fileID: 12800000, guid: e0b356bbbc775f94aa45f376de907234, type: 3}
   - {fileID: 12800000, guid: 0711817d99ddbd643a559c8c9d4f9171, type: 3}
   - {fileID: 12800000, guid: 076c2ae1a283e7941b86138249f230d9, type: 3}
   - {fileID: 12800000, guid: 74ad7fd516e803649807d47f6b6efba0, type: 3}
+  - {fileID: 12800000, guid: d981e513b3d22f846b33ee836898cff3, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
