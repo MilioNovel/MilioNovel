@@ -19,6 +19,22 @@ MonoBehaviour:
     m_Key: WELCOME_TO_MILIONOVEL
     m_Metadata:
       m_Items: []
+  - m_Id: 658654918959104
+    m_Key: NEW_GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659010260393984
+    m_Key: CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659544698609664
+    m_Key: OPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659717130641408
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

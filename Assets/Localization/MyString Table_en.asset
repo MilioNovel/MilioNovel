@@ -22,6 +22,22 @@ MonoBehaviour:
     m_Localized: Welcome to MilioNovel !
     m_Metadata:
       m_Items: []
+  - m_Id: 658654918959104
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659010260393984
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659544698609664
+    m_Localized: Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659717130641408
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
