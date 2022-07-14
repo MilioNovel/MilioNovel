@@ -60,3 +60,7 @@ crashlytics-build.properties
 
 # TMP
 Assets/TextMesh Pro/Resources/Fonts & Materials/06_NotoSansCJKjp
+
+# Plastic SCM
+.collabignore
+ignore.conf
