@@ -1,6 +1,9 @@
 # MilioNovel
 Who Wants to Be a Millionaire? × Love Novel × Minecraft
 
+# 今後について
+無料枠上限になるまでPlastic SCMで更新します。
+
 ## 100MB超えのファイルについて
 100MBを超えたファイルは7zip化して、[uploader.jp](https://ux.getuploader.com/tunakaniriGitHub/)に置いています。<br>
 現在のファイル一覧<br>
