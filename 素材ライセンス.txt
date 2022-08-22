@@ -2,5 +2,3 @@
 SIL OPEN FONT LICENSE Version 1.1
 ・MingCute Icon
 Apache License 2.0
-・NMeCab
-なんか多すぎてわからん(「./Assets/NMeCab」に記載)
