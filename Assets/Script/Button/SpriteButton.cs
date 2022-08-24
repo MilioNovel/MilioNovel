@@ -1,28 +1,36 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SpriteButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class SpriteButton : MonoBehaviour,
+    IPointerEnterHandler,
+    IPointerClickHandler,
+    IPointerDownHandler,
+    IPointerExitHandler,
+    IPointerUpHandler
 {
-    SpriteRenderer spriteRenderer;
-    SpriteRenderer DefaultSprite;
-    [SerializeField] Sprite HighlightedSprite;
-    [SerializeField] Sprite PressedSprite;
-    [SerializeField] Sprite SelectedSprite;
-    void Start()
-    {
-       DefaultSprite = GetComponent<SpriteRenderer>();
-    }
-    public void OnPointerEnter(PointerEventData pointerEventData)
-    {
-        Debug.Log("Cursor Entering " + name + " GameObject");
-    }
-    public void OnPointerExit(PointerEventData pointerEventData)
-    {
-        Debug.Log("Cursor Exiting " + name + " GameObject");
-    }
+    public System.Action onClickCallback;
 
-    void Update()
+    [SerializeField] private CanvasGroup _canvasGroup;
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        //Debug.Log("<color=yellow>Yes!</color>");
+        Debug.Log(name + "の上に来たぞ！");
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log(name + "をクリック！");
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log(name + "の上で離した！");
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log(name + "から離れた！");
+
+    }
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        Debug.Log(name + "をクリックしたやつがクリックを離した！");
     }
 }
