@@ -10,27 +10,36 @@ public class SpriteButton : MonoBehaviour,
 {
     public System.Action onClickCallback;
 
-    [SerializeField] private CanvasGroup _canvasGroup;
+    [SerializeField] private Sprite YEAS;
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerEnter(PointerEventData pointerEventData)
     {
         Debug.Log(name + "の上に来たぞ！");
     }
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData pointerEventData)
     {
-        Debug.Log(name + "をクリック！");
+        if (pointerEventData.button == PointerEventData.InputButton.Left)
+        {
+            Debug.Log(name + "をクリック！");
+        }
     }
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData pointerEventData)
     {
-        Debug.Log(name + "の上で離した！");
+        if (pointerEventData.button == PointerEventData.InputButton.Left)
+        {
+            Debug.Log(name + "の上で離した！");
+        }
     }
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnPointerExit(PointerEventData pointerEventData)
     {
         Debug.Log(name + "から離れた！");
 
     }
-    public void OnPointerUp(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData pointerEventData)
     {
-        Debug.Log(name + "をクリックしたやつがクリックを離した！");
+        if (pointerEventData.button == PointerEventData.InputButton.Left)
+        {
+            Debug.Log(name + "をクリックしたやつがクリックを離した！");
+        }
     }
 }
