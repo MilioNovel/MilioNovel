@@ -1,10 +1,9 @@
-//親オブジェクトにLockCheck.csを入れておくこと
 using UnityEngine;
 
 [RequireComponent(typeof(UnityEngine.SpriteRenderer))]
 [RequireComponent(typeof(UnityEngine.PolygonCollider2D))]
 
-public class SpriteButton : MonoBehaviour
+public class OptionsSpriteButton : MonoBehaviour
 {
     private SpriteRenderer spriteR;
     private Sprite DefaultSprite;
@@ -19,12 +18,18 @@ public class SpriteButton : MonoBehaviour
     private void OnMouseEnter()
     {
         Debug.Log(name + "の上に来たぞ！");
-        spriteR.sprite = HighlightedSprite;
+        if (spriteR.sprite != SelectedSprite)
+        {
+            spriteR.sprite = HighlightedSprite;
+        }
     }
     private void OnMouseExit()
     {
         Debug.Log(name + "から離れた！");
-        spriteR.sprite = DefaultSprite;
+        if (spriteR.sprite != SelectedSprite)
+        {
+            spriteR.sprite = DefaultSprite;
+        }
     }
     private void OnMouseDown()
     {
