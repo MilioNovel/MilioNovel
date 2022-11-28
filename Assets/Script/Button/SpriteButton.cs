@@ -1,4 +1,3 @@
-//親オブジェクトにLockCheck.csを入れておくこと
 using UnityEngine;
 
 [RequireComponent(typeof(UnityEngine.SpriteRenderer))]

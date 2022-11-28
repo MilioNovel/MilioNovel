@@ -53,11 +53,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b83292b05a652674aa1adba82ee4ada9, type: 3}
   - {fileID: 21300000, guid: eff22b51cb6d6d248a3b96bddf5c06f9, type: 3}
   - {fileID: 21300000, guid: 756e625282a655f42902de536061c397, type: 3}
+  - {fileID: 21300000, guid: 5cd62db22274a5142b2f5dadb59c03ac, type: 3}
   - {fileID: 21300000, guid: 2a9d71f44dd91124dbeaedc89a9e729e, type: 3}
   - {fileID: 21300000, guid: 05fbe375487d7b24c884374f0870f5e2, type: 3}
   - {fileID: 21300000, guid: a331a4c5ea5606d4580ec2eea2933096, type: 3}
   - {fileID: 21300000, guid: d19ec2c63c662334bb9a73d887cde40f, type: 3}
   - {fileID: 21300000, guid: f5701ea70ef6cc5479a2f2b08d2841b5, type: 3}
+  - {fileID: 21300000, guid: 7ee071a8f7963a44d972ae0163ddfaf8, type: 3}
   - {fileID: 21300000, guid: 29af77d85f8460446bd4f1b0c076010b, type: 3}
   - {fileID: 21300000, guid: c2f7a049b51881444bae2365c04d94c9, type: 3}
   - {fileID: 21300000, guid: f420eaaacae014b49bccc7d04209aaf4, type: 3}
@@ -69,11 +71,13 @@ SpriteAtlas:
   - background_trial
   - lifeline_audience
   - button_lifeline_clicked
+  - button_option_confirm_pressed
   - button_lifeline
   - button_dropout
   - button_option_selected
   - button_option_pressed
   - button_option_highlighted
+  - button_option_confirmed
   - lifeline_telephone
   - button_lifeline_highlighted
   - background_question

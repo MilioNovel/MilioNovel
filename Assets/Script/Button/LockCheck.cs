@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class LockCheck : MonoBehaviour
 {
-    public bool OptionLock;
+    public bool FinalAnswer;
 }
