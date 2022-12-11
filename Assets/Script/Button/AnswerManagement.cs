@@ -10,10 +10,6 @@ public class AnswerManagement : MonoBehaviour
     */
     private GameObject _lastExecutedObject;
     private OptionsSpriteButton _lastExecutedScript;
-    [SerializeField] GameObject m_optionA;
-    [SerializeField] GameObject m_optionB;
-    [SerializeField] GameObject m_optionC;
-    [SerializeField] GameObject m_optionD;
     void Start()
     {
         FinalAnswer = 0;
