@@ -1,67 +1,91 @@
 //親オブジェクトにLockCheck.csを入れておくこと
 using UnityEngine;
 
+// Sprite表示用
 [RequireComponent(typeof(UnityEngine.SpriteRenderer))]
+// 当たり範囲設定用
 [RequireComponent(typeof(UnityEngine.PolygonCollider2D))]
+
 
 public class OptionsSpriteButton : MonoBehaviour
 {
-    private SpriteRenderer spriteR;
-    private Sprite defaultSprite;
-    private LockCheck lockCheck;
-    [SerializeField] private Sprite highlightedSprite;
-    [SerializeField] private Sprite pressedSprite;
-    [SerializeField] private Sprite selectedSprite;
-    [SerializeField] private Sprite confirmPressedSprite;
-    [SerializeField] private Sprite confirmedSprite;
-    private void Start()
+    private int _spriteNumber;
+    /*
+     0 = default
+     1 = selected
+     2 = confirmed
+     */
+    private AnswerManagement _answerManagement;
+    private SpriteRenderer _spriteR;
+    private Sprite _defaultSprite;
+    [SerializeField] Sprite m_highlightedSprite;
+    [SerializeField] Sprite m_pressedSprite;
+    [SerializeField] Sprite m_selectedSprite;
+    [SerializeField] Sprite m_confirmPressedSprite;
+    [SerializeField] Sprite m_confirmedSprite;
+    void Start()
     {
-        spriteR = GetComponent<SpriteRenderer>();
-        defaultSprite = spriteR.sprite;
-        lockCheck = GetComponentInParent<LockCheck>();
+        _spriteR = GetComponent<SpriteRenderer>();
+        _defaultSprite = _spriteR.sprite;
+        _answerManagement = GetComponentInParent<AnswerManagement>();
+        _spriteNumber = 0;
     }
-    private void OnMouseEnter()
+    void OnMouseEnter()
     {
-        if (spriteR.sprite != selectedSprite && lockCheck.FinalAnswer == false)
+        if (_answerManagement.FinalAnswer != 2 && _spriteNumber == 0)
         {
-            Debug.Log(name + "の上に来たぞ！");
-            spriteR.sprite = highlightedSprite;
+            Debug.Log("[OptionsSpriteButton] " + name + "の上に来たぞ！");
+            _spriteR.sprite = m_highlightedSprite;
         }
     }
-    private void OnMouseExit()
+    void OnMouseExit()
     {
-        if (lockCheck.FinalAnswer == false)
+        if (_spriteR.sprite == m_highlightedSprite)
         {
-            Debug.Log(name + "から離れた！");
-            spriteR.sprite = defaultSprite;
+            Debug.Log("[OptionsSpriteButton] " + name + "から離れた！");
+            _spriteR.sprite = _defaultSprite;
         }
     }
-    private void OnMouseDown()
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _answerManagement.FinalAnswer != 2 && _answerManagement.Check(_spriteNumber, name))   // true時のみ実行
         {
-            if (lockCheck.FinalAnswer == false)
+            if (_spriteNumber == 1)
             {
-                Debug.Log(name + "をクリック！");
-                spriteR.sprite = pressedSprite;
+                Debug.Log("[OptionsSpriteButton] " + name + "でファイナルアンサー？");
+                _spriteR.sprite = m_confirmPressedSprite;
             }
-            else if(spriteR.sprite == selectedSprite)
+            else
             {
-                spriteR.sprite = confirmPressedSprite;
+                Debug.Log("[OptionsSpriteButton] " + name + "をクリック?");
+                _spriteR.sprite = m_pressedSprite;
             }
         }
     }
-    private void OnMouseUpAsButton()
+    void OnMouseUpAsButton()
     {
-        if (lockCheck.FinalAnswer == false)
+        if (_answerManagement.FinalAnswer != 2 && _answerManagement.Check(_spriteNumber, name))
         {
-            Debug.Log(name + "の上で離した！");
-            spriteR.sprite = selectedSprite;
-            lockCheck.FinalAnswer = true;
+            if (_spriteNumber == 1)
+            {
+                Debug.Log("[OptionsSpriteButton] " + name + "でファイナルアンサー！");
+                _spriteR.sprite = m_confirmedSprite;
+                _answerManagement.FinalAnswer = 2;
+                _spriteNumber = 2;
+            }
+            else
+            {
+                Debug.Log("[OptionsSpriteButton] " + name + "をクリック！");
+                _spriteR.sprite = m_selectedSprite;
+                _answerManagement.FinalAnswer = 1;
+                _spriteNumber = 1;
+            }
         }
-        else if (spriteR.sprite == confirmPressedSprite)
-        {
-            spriteR.sprite = confirmedSprite;
-        }
+
+    }
+    public void ResetSprite()
+    {
+        _spriteR.sprite = _defaultSprite;
+        _spriteNumber = 0;
     }
 }

@@ -1,41 +1,43 @@
 using UnityEngine;
 
+// Sprite表示用
 [RequireComponent(typeof(UnityEngine.SpriteRenderer))]
+// 当たり範囲設定用
 [RequireComponent(typeof(UnityEngine.PolygonCollider2D))]
 
 public class SpriteButton : MonoBehaviour
 {
-    private SpriteRenderer spriteR;
-    private Sprite DefaultSprite;
-    [SerializeField] private Sprite HighlightedSprite;
-    [SerializeField] private Sprite PressedSprite;
-    [SerializeField] private Sprite SelectedSprite;
-    private void Start()
+    private SpriteRenderer _spriteR;
+    private Sprite _defaultSprite;
+    [SerializeField] Sprite m_highlightedSprite;
+    [SerializeField] Sprite m_pressedSprite;
+    [SerializeField] Sprite m_selectedSprite;
+    void Start()
     {
-        spriteR = GetComponent<SpriteRenderer>();
-        DefaultSprite = spriteR.sprite;
+        _spriteR = GetComponent<SpriteRenderer>();
+        _defaultSprite = _spriteR.sprite;
     }
-    private void OnMouseEnter()
+    void OnMouseEnter()
     {
         Debug.Log(name + "の上に来たぞ！");
-        spriteR.sprite = HighlightedSprite;
+        _spriteR.sprite = m_highlightedSprite;
     }
-    private void OnMouseExit()
+     void OnMouseExit()
     {
         Debug.Log(name + "から離れた！");
-        spriteR.sprite = DefaultSprite;
+        _spriteR.sprite = _defaultSprite;
     }
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log(name + "をクリック！");
-            spriteR.sprite = PressedSprite;
+            _spriteR.sprite = m_pressedSprite;
         }
     }
-    private void OnMouseUpAsButton()
+    void OnMouseUpAsButton()
     {
         Debug.Log(name + "の上で離した！");
-        spriteR.sprite = SelectedSprite;
+        _spriteR.sprite = m_selectedSprite;
     }
 }
