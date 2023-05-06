@@ -63,3 +63,7 @@ Assets/TextMesh Pro/Resources/Fonts & Materials/06_NotoSansCJKjp
 
 # DS_Store
 .DS_Store
+
+# Google Sheet
+Assets/Localization/Google Sheets Service.*
+Assets/Localization/Scenes/*String Table.*

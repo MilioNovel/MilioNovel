@@ -18,7 +18,13 @@ MonoBehaviour:
   m_GUID: 2b5f1d5f164df7844a45137765453902
   m_SerializeEntries:
   - m_GUID: f40946b0022cdb647970b2bab7e6ce5c
-    m_Address: MyString Table_en
+    m_Address: Home Scene String Table_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 021d6d855b0fd614ab13d56a2e276a69
+    m_Address: Quiz Scene String Table_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
