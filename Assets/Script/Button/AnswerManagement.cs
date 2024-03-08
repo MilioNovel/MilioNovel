@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class AnswerManagement : MonoBehaviour
 {
-    public int FinalAnswer;
     /*
     0 = Not selected
     1 = Final Answer
     2 = Option lock
     */
+    public int FinalAnswer;
     private GameObject _lastExecutedObject;
-    private OptionsSpriteButton _lastExecutedScript;
+    private OptionSpriteButton _lastExecutedScript;
     void Start()
     {
         FinalAnswer = 0;
@@ -17,24 +17,24 @@ public class AnswerManagement : MonoBehaviour
 
     public bool Check(int spriteChanged, string lastExecutedScriptName)
     {
-        if (FinalAnswer == 0)
+        if (FinalAnswer == 2)
+        { 
+            return false;
+        }
+        else if (FinalAnswer == 0)
         {
             _lastExecutedObject = transform.Find(lastExecutedScriptName).gameObject;
-            _lastExecutedScript = _lastExecutedObject.GetComponent<OptionsSpriteButton>();
+            _lastExecutedScript = _lastExecutedObject.GetComponent<OptionSpriteButton>();
             return true;
         }
         else if (spriteChanged == 0)
         {
             _lastExecutedScript.ResetSprite();
             _lastExecutedObject = transform.Find(lastExecutedScriptName).gameObject;
-            _lastExecutedScript = _lastExecutedObject.GetComponent<OptionsSpriteButton>();
+            _lastExecutedScript = _lastExecutedObject.GetComponent<OptionSpriteButton>();
             return true;
         }
-        else if (spriteChanged == 1)
-        {
-            return true;
-        }
-        else if (spriteChanged == 2)
+        else if (spriteChanged >= 1 && spriteChanged <= 2)
         {
             return true;
         }
